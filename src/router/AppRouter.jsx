@@ -5,11 +5,11 @@ import Projects from "../pages/Projects";
 import Certifications from "../pages/Certifications";
 import Admin from "../pages/Admin";
 import Dashboard from "../pages/Dashboard";
-import AddProject from "../pages/AddProject";
-import EditProject from "../pages/EditProject";
+import AddProject from "../pages/Addproject";
+import EditProject from "../pages/Editproject";
 import Login from "../pages/Login";
 import ProtectedRoute from "../components/ProtectedRoute";
-import AddCertificate from "../pages/AddCertificate";
+import AddCertificate from "../pages/Addcertificate";
 import EditCertificate from "../pages/Editcertificate";
       
 
