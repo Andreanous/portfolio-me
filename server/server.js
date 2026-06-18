@@ -18,23 +18,13 @@ import bcrypt from "bcryptjs";
 import "./config/cloudinary.js";
 
 
+import serverless from "serverless-http";
+
 const app = express();
 
-// Middleware
-app.use(cors());
-app.use(express.json());
+// ... kode middleware dan routes yang ada ...
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  serverSelectionTimeoutMS: 5000
-})
-.then(() => {
-  console.log("✅ MongoDB Connected");
-})
-.catch((err) => {
-  console.log("❌ MongoDB Error:");
-  console.log(err);
-});
+export const handler = serverless(app);
 
 // Login Route
 app.post("/login", async (req, res) => {
