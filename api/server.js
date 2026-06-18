@@ -3,19 +3,19 @@
 import dotenv from "dotenv";
 dotenv.config();
 console.log(process.env.CLOUD_API_KEY);
-import Project from "./models/project.js";
+import Project from "../server/models/project.js";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import upload from "./middleware/upload.js";
-import { verifyToken } from "./middleware/auth.js";
-import Certificate from "./models/certificate.js";
-import User from "./models/user.js";
+import upload from "../server/middleware/upload.js";
+import { verifyToken } from "../server/middleware/auth.js";
+import Certificate from "../server/models/certificate.js";
+import User from "../server/models/user.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
 
-import "./config/cloudinary.js";
+import "../server/config/cloudinary.js";
 
 
 import serverless from "serverless-http";
