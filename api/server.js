@@ -56,7 +56,12 @@ app.use(async (req, res, next) => {
     await connectToDatabase();
     next();
   } catch (err) {
-    res.status(500).json({ message: "Database connection error", error: err.message });
+    // Kirim error langsung ke browser agar kita tahu penyebabnya
+    res.status(500).json({ 
+        message: "Database connection error", 
+        error: err.message,
+        stack: err.stack 
+    });
   }
 });
 
