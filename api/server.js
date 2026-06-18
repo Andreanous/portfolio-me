@@ -40,15 +40,24 @@ app.get("/test", (req, res) => {
 });
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  serverSelectionTimeoutMS: 5000
-})
-.then(() => {
-  console.log("✅ MongoDB Connected");
-})
-.catch((err) => {
-  console.log("❌ MongoDB Error:");
-  console.log(err);
+let cachedConnection = null;
+
+async function connectToDatabase() {
+  if (cachedConnection) return cachedConnection;
+  
+  cachedConnection = await mongoose.connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 5000,
+  });
+  return cachedConnection;
+}
+
+app.use(async (req, res, next) => {
+  try {
+    await connectToDatabase();
+    next();
+  } catch (err) {
+    res.status(500).json({ message: "Database connection error", error: err.message });
+  }
 });
 
 export const handler = serverless(app);
