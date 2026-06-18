@@ -22,7 +22,21 @@ import serverless from "serverless-http";
 
 const app = express();
 
-// ... kode middleware dan routes yang ada ...
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// MongoDB Connection
+mongoose.connect(process.env.MONGO_URI, {
+  serverSelectionTimeoutMS: 5000
+})
+.then(() => {
+  console.log("✅ MongoDB Connected");
+})
+.catch((err) => {
+  console.log("❌ MongoDB Error:");
+  console.log(err);
+});
 
 export const handler = serverless(app);
 
@@ -42,11 +56,12 @@ app.post("/login", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
 app.post(
   "/projects",
