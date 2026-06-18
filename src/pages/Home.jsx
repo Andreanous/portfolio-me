@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_URL } from "../config";
 
 import Hero from "../sections/Hero";
 import Aboutme from "../sections/Aboutme";
@@ -21,7 +22,7 @@ function Home() {
     const fetchProjects = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/projects"
+          `${API_URL}/projects`
         );
 
         setProjects(res.data);
@@ -34,7 +35,7 @@ function Home() {
       async () => {
         try {
           const res = await axios.get(
-            "http://localhost:5000/certificates"
+            `${API_URL}/certificates`
           );
 
           setCertificates(res.data);

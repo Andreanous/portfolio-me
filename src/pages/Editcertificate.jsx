@@ -61,7 +61,7 @@ function EditCertificate() {
       }
 
       await axios.put(
-        `http://localhost:5000/certificates/${id}`,
+        `${API_URL}/certificates/${id}`,
         formData
       );
 

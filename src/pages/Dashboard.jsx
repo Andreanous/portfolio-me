@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom";
+import { API_URL } from "../config";
 
 function Dashboard() {
   const [projects, setProjects] =
@@ -14,7 +15,7 @@ function Dashboard() {
   const fetchProjects = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/projects"
+        `${API_URL}/projects`
       );
 
       setProjects(res.data);
@@ -26,7 +27,7 @@ function Dashboard() {
   const fetchCertificates = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/certificates"
+        `${API_URL}/certificates`
       );
 
       setCertificates(res.data);
@@ -43,7 +44,7 @@ function Dashboard() {
   const deleteProject = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/projects/${id}`
+        `${API_URL}/projects/${id}`
       );
 
       fetchProjects();
@@ -55,7 +56,7 @@ function Dashboard() {
   const deleteCertificate = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/certificates/${id}`
+        `${API_URL}/certificates/${id}`
       );
 
       fetchCertificates();

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
+import { API_URL } from "../config";
 
 function AddCertificate() {
   const [title, setTitle] =
@@ -59,7 +60,7 @@ function AddCertificate() {
       );
 
       await axios.post(
-        "http://localhost:5000/certificates",
+        `${API_URL}/certificates`,
         formData
       );
 

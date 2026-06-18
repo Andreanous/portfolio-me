@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
+import { API_URL } from "../config";
 
 function Admin() {
   // FORM STATES
@@ -22,7 +23,7 @@ function Admin() {
   const fetchProjects = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/projects"
+        `${API_URL}/projects`
       );
 
       setProjects(res.data);
@@ -46,7 +47,7 @@ function Admin() {
     try {
       if (editingId) {
   await axios.put(
-    `http://localhost:5000/projects/${editingId}`,
+    `${API_URL}/projects/${editingId}`,
     {
       title,
       description,
@@ -62,7 +63,7 @@ function Admin() {
   setEditingId(null);
 } else {
   await axios.post(
-    "http://localhost:5000/projects",
+    `${API_URL}/projects`,
     {
       title,
       description,
@@ -95,7 +96,7 @@ function Admin() {
   const deleteProject = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/projects/${id}`
+        `${API_URL}/projects/${id}`
       );
 
       fetchProjects();
