@@ -26,6 +26,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Diagnostic Test Route
+app.get("/test", (req, res) => {
+  res.json({
+    status: "ok",
+    env: {
+      has_mongo_uri: !!process.env.MONGO_URI,
+      has_jwt_secret: !!process.env.JWT_SECRET,
+      has_cloud_name: !!process.env.CLOUD_NAME,
+      mongoose_state: mongoose.connection.readyState
+    }
+  });
+});
+
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, {
   serverSelectionTimeoutMS: 5000
