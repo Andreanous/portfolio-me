@@ -63,12 +63,13 @@ return (
           </p>
 
 
-          {/* BUTTONS */}
+                    {/* BUTTONS */}
           <div
             style={{
               display: "flex",
               gap: "20px",
               flexWrap: "wrap",
+              justifyContent: "center", // Memastikan tombol di tengah
             }}
           >
             <button
@@ -79,9 +80,10 @@ return (
                 background:
                   "linear-gradient(to right, #3b82f6, #9333ea)",
                 color: "white",
-                fontSize: "16px",
+                fontSize: "clamp(0.9rem, 2vw, 1rem)", // Font mengecil di HP
                 cursor: "pointer",
                 fontWeight: "bold",
+                minWidth: "160px", // Memastikan tombol punya ukuran minimum
               }}
             >
               Explore Projects
@@ -94,9 +96,10 @@ return (
                 border: "1px solid rgba(255,255,255,0.2)",
                 background: "transparent",
                 color: "white",
-                fontSize: "16px",
+                fontSize: "clamp(0.9rem, 2vw, 1rem)", // Font mengecil di HP
                 cursor: "pointer",
                 backdropFilter: "blur(10px)",
+                minWidth: "160px",
               }}
             >
               Contact Me
