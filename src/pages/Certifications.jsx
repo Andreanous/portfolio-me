@@ -141,14 +141,14 @@ setSelectedCertificate] = useState(null);
       {/* CERTIFICATE GRID */}
       <section
         style={{
-          padding: "0 80px 100px",
+          padding: "0 clamp(20px, 5vw, 80px) 100px",
         }}
       >
         <div
           style={{
             display: "grid",
             gridTemplateColumns:
-              "repeat(auto-fit,minmax(320px,1fr))",
+              "repeat(auto-fit,minmax(280px,1fr))",
             gap: "30px",
           }}
         >
