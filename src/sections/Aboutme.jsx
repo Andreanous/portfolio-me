@@ -23,7 +23,7 @@ function Aboutme() {
   return (
     <div
       style={{
-        padding: "140px 40px",
+        padding: "clamp(40px, 10vw, 140px) 20px",
         position: "relative",
         zIndex: 2,
       }}
@@ -43,8 +43,8 @@ function Aboutme() {
   style={{
     display: "grid",
     gridTemplateColumns:
-      "repeat(auto-fit,minmax(320px,1fr))",
-    gap: "70px",
+      "repeat(auto-fit,minmax(280px,1fr))",
+    gap: "30px",
     alignItems: "center",
 
     background:
@@ -60,7 +60,7 @@ function Aboutme() {
 
     borderRadius: "36px",
 
-    padding: "60px",
+    padding: "30px",
 
     boxShadow:
       "0 20px 80px rgba(0,0,0,0.35)",

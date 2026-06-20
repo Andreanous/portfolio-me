@@ -6,7 +6,7 @@ function FeaturedProject({ projects }) {
 return (
 <div
   style={{
-    padding: "120px 40px",
+    padding: "clamp(40px, 10vw, 120px) 20px",
     position: "relative",
     zIndex: 2,
   }}
@@ -26,7 +26,7 @@ return (
     style={{
       display: "grid",
       gridTemplateColumns:
-        "repeat(auto-fit, minmax(340px, 1fr))",
+        "repeat(auto-fit, minmax(280px, 1fr))",
       gap: "35px",
       marginTop: "60px",
       alignItems: "stretch",
