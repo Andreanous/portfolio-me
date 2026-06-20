@@ -38,7 +38,7 @@
           alt={project.title}
           style={{
             width: "100%",
-            height: "220px",
+            height: "clamp(150px, 40vw, 220px)",
             objectFit: "cover",
             borderRadius: "18px",
             marginBottom: "24px",
@@ -47,7 +47,7 @@
 
         <h2
           style={{
-            fontSize: "28px",
+            fontSize: "clamp(1.25rem, 5vw, 1.75rem)",
             marginBottom: "14px",
             color: "white",
           }}
