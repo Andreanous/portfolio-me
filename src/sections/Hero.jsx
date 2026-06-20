@@ -18,7 +18,7 @@ return (
           <p
             style={{
               color: "#38bdf8",
-              marginTop: "100px",
+              marginTop: "clamp(60px, 10vh, 100px)",
               marginBottom: "20px",
               letterSpacing: "3px",
               textTransform: "uppercase",
@@ -29,7 +29,7 @@ return (
 
           <h1
             style={{
-              fontSize: "80px",
+              fontSize: "clamp(2.5rem, 10vw, 5rem)",
               fontWeight: "bold",
               lineHeight: 1.1,
               maxWidth: "1000px",
@@ -53,7 +53,7 @@ return (
           <p
             style={{
               maxWidth: "700px",
-              fontSize: "20px",
+              fontSize: "clamp(1rem, 3vw, 1.25rem)",
               color: "#ffffff",
               lineHeight: 1.8,
               marginBottom: "40px",
