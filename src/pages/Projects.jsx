@@ -34,7 +34,7 @@ useEffect(() => {
 
         <section
           style={{
-            padding: "120px 80px",
+            padding: "clamp(60px, 10vw, 120px) clamp(20px, 5vw, 80px)",
             minHeight: "100vh",
             position: "relative",
             zIndex: 2,
@@ -227,7 +227,7 @@ useEffect(() => {
             style={{
               display: "grid",
               gridTemplateColumns:
-                "repeat(auto-fit,minmax(380px,1fr))",
+                "repeat(auto-fit,minmax(280px,1fr))",
               gap: "40px",
             }}
           >
