@@ -44,17 +44,12 @@ function AppRouter() {
 />
 
         <Route
-          path="/admin/add"
-        element={<AddProject />}
-        />
-        <Route
   path="/admin/edit/:id"
-  element={<EditProject />}
-/>
-
-<Route
-  path="/login"
-  element={<Login />}
+  element={
+    <ProtectedRoute>
+      <EditProject />
+    </ProtectedRoute>
+  }
 />
 
 <Route
@@ -64,6 +59,11 @@ function AppRouter() {
       <AddProject />
     </ProtectedRoute>
   }
+/>
+
+<Route
+  path="/login"
+  element={<Login />}
 />
 
 <Route
