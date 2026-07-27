@@ -9,8 +9,8 @@ function Contact() {
   const socials = [
     {
       name: "Github",
-      username: "github.com/yourgithub",
-      link: "https://github.com",
+      username: "github.com/Andreanous",
+      link: "https://github.com/Andreanous/",
       icon: <FaGithub />,
     },
 
@@ -23,8 +23,8 @@ function Contact() {
 
     {
       name: "LinkedIn",
-      username: "linkedin.com/in/yourlinkedin",
-      link: "https://linkedin.com",
+      username: "linkedin.com/in/adrian-fadlillah",
+      link: "https://linkedin.com/in/adrian-fadlillah",
       icon: <FaLinkedin />,
     },
 
