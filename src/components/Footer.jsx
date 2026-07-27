@@ -40,19 +40,19 @@ const footerLinks = [
 
       {
         title: "Instagram",
-        href: "#",
+        href: "https://www.instagram.com/adrianfdllh/",
         icon: FaInstagram,
       },
 
       {
         title: "Github",
-        href: "#",
+        href: "https://github.com/Andreanous/",
         icon: FaGithub,
       },
 
       {
         title: "LinkedIn",
-        href: "#",
+        href: "https://linkedin.com/in/adrian-fadlillah",
         icon: FaLinkedin,
       },
     ],
