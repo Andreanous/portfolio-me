@@ -31,9 +31,13 @@ function AppRouter() {
         />
 
         <Route
-          path="/admin"
-          element={<Admin />}
-        />
+  path="/admin"
+  element={
+    <ProtectedRoute>
+      <Admin />
+    </ProtectedRoute>
+  }
+/>
         <Route
   path="/dashboard"
   element={
