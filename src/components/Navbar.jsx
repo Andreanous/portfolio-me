@@ -75,7 +75,7 @@ function Navbar() {
             "transparent",
         }}
       >
-        Adrian.dev
+        Adriandev
       </h1>
 
       {/* MENU */}
