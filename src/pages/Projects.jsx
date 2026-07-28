@@ -111,8 +111,8 @@ useEffect(() => {
   </p>
 
   <a 
-    href="MASUKKAN_LINK_CV_ANDA_DI_SINI" 
-    download="CV_Nama_Anda.pdf"
+    href="https://drive.google.com/uc?export=download&id=1F6jfS2_tPKvwDBi7-YcoIDwb5OdJwlvI" 
+    target="_blank"
     style={{
       display: "inline-block",
       marginTop: "30px",

@@ -26,6 +26,7 @@ function Sidebar() {
         position: "fixed",
         left: 0,
         top: 0,
+        zIndex: 500,
       }}
     >
       {/* TOP MENU */}
@@ -34,6 +35,7 @@ function Sidebar() {
           style={{
             color: "white",
             marginBottom: "40px",
+            marginTop: "40px",
           }}
         >
           Admin Panel
