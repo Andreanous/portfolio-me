@@ -265,11 +265,11 @@ function RadialOrbitalTimeline({ timelineData }) {
   }}
 >
 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-      My Skills
+      Skills Saya
   </h2>
 
   <p className="text-slate-400 mb-10">
-    Click any skill node on Right content to view detailed information.
+    Klik node skill mana saja di konten kanan untuk melihat informasi detail.
   </p>
 
 <h3 className="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">
