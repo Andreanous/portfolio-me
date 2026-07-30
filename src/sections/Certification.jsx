@@ -111,8 +111,8 @@ function Certification({ certificates }) {
   }}
 >
    Sertifikasi yang saya kumpulkan berasal dari kursus dan pelatihan yang saya ikuti.
-   Beberapa di antaranya dari Dicoding, AWS, dan platform belajar lainnya. Masih
-   banyak yang perlu dipelajari, dan ini langkah awal saya.
+   Beberapa di antaranya dari IBM, BNSP dan platform Sertifikasi lainnya. Masih
+   banyak yang perlu dipelajari, dan ini adalah langkah awal saya.
 </p>
 
   <Link

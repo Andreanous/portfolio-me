@@ -60,8 +60,8 @@ return (
             }}
           >
             Halo, salam kenal! Saya Adrian. Seorang Fullstack Developer yang suka
-            mengerjakan project dari frontend sampai backend — React, Node.js, MongoDB.
-            Terima kasih sudah mampir, silakan lihat-lihat.
+            mengerjakan project dari frontend sampai backend React, Node.js, MongoDB.
+            Thanks for your visit.
           </p>
 
 
