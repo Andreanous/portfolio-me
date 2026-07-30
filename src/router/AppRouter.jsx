@@ -11,6 +11,7 @@ import Login from "../pages/Login";
 import ProtectedRoute from "../components/ProtectedRoute";
 import AddCertificate from "../pages/Addcertificate";
 import EditCertificate from "../pages/Editcertificate";
+import NotFound from "../pages/NotFound";
       
 
 
@@ -87,6 +88,7 @@ function AppRouter() {
     </ProtectedRoute>
   }
 />
+<Route path="*" element={<NotFound />} />
       </Routes>
       
     </BrowserRouter>
