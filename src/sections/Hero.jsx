@@ -24,7 +24,7 @@ return (
               textTransform: "uppercase",
             }}
           >
-            Fullstack Developer | Web Enthusiast
+            Fullstack Developer
           </p>
 
           <h1
@@ -59,7 +59,9 @@ return (
               marginBottom: "40px",
             }}
           >
-            Saya adalah pengembang web yang antusias dalam mengubah ide kreatif menjadi aplikasi yang fungsional, efisien, dan berdampak nyata.
+            Halo, salam kenal! Saya Adrian. Seorang Fullstack Developer yang suka
+            mengerjakan project dari frontend sampai backend — React, Node.js, MongoDB.
+            Terima kasih sudah mampir, silakan lihat-lihat.
           </p>
 
 

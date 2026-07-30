@@ -107,7 +107,9 @@ useEffect(() => {
       lineHeight: 1.8,
     }}
   >
-    Seorang calon developer yang berfokus pada pengembangan web full-stack yang bersih dan efisien. Saya antusias dalam mengubah kebutuhan kompleks menjadi pengalaman digital yang intuitif, dengan fokus pada performa dan skalabilitas aplikasi.
+    Saya sedang membangun portofolio project sebagai bentuk pembelajaran dan praktik langsung.
+    Setiap project saya kerjakan untuk memahami teknologi yang digunakan secara lebih dalam.
+    Kalau ada masukan atau saran, silakan hubungi saya.
   </p>
 
   <a 

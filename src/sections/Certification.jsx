@@ -110,7 +110,9 @@ function Certification({ certificates }) {
     padding: "0 20px",
   }}
 >
-  Sertifikasi ini mencerminkan dedikasi saya untuk terus berkembang di dunia teknologi, rekayasa perangkat lunak, dan inovasi digital. Hal ini merupakan bukti pengalaman praktis, keahlian yang tervalidasi, serta upaya saya dalam mengejar keunggulan melalui program pembelajaran dan pelatihan standar industri.
+   Sertifikasi yang saya kumpulkan berasal dari kursus dan pelatihan yang saya ikuti.
+   Beberapa di antaranya dari Dicoding, AWS, dan platform belajar lainnya. Masih
+   banyak yang perlu dipelajari, dan ini langkah awal saya.
 </p>
 
   <Link
