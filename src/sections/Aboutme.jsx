@@ -153,7 +153,7 @@ function Aboutme() {
               },
               {
                 icon: "🛠️",
-                title: "Yang Pernah Dibikin",
+                title: "Yang Pernah Kukerjakan",
                 desc: "Beberapa project yang sudah saya selesaikan: aplikasi CRUD, portfolio website, dan sistem manajemen sederhana.",
               },
               {
