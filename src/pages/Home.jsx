@@ -10,6 +10,7 @@ import Certification from "../sections/Certification";
 import Skills from "../sections/Skills";
 import Contact from "../sections/Contact";
 import Footer from "../components/Footer";
+import SkeletonGrid from "../components/Skeleton";
 
 function Home() {
   const [projects, setProjects] =
@@ -17,6 +18,12 @@ function Home() {
 
   const [certificates, setCertificates] =
     useState([]);
+
+  const [loadingProjects, setLoadingProjects] =
+    useState(true);
+
+  const [loadingCertificates, setLoadingCertificates] =
+    useState(true);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -28,6 +35,8 @@ function Home() {
         setProjects(res.data);
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoadingProjects(false);
       }
     };
 
@@ -41,6 +50,8 @@ function Home() {
           setCertificates(res.data);
         } catch (error) {
           console.log(error);
+        } finally {
+          setLoadingCertificates(false);
         }
       };
 
@@ -64,17 +75,31 @@ function Home() {
 
       <Hero />
 
-      <FeaturedProject
-        projects={projects}
-      />
+      {loadingProjects ? (
+        <div style={{ padding: "clamp(40px, 10vw, 120px) 20px" }}>
+          <h1 style={{ fontSize: "50px", marginBottom: "70px", textAlign: "center", color: "white" }}>
+            Proyek Unggulan
+          </h1>
+          <SkeletonGrid count={3} type="project" />
+        </div>
+      ) : (
+        <FeaturedProject projects={projects} />
+      )}
 
       <Aboutme />
 
       <Skills />
 
-      <Certification
-        certificates={certificates}
-      />
+      {loadingCertificates ? (
+        <div style={{ padding: "120px 0" }}>
+          <h1 style={{ fontSize: "50px", marginBottom: "70px", textAlign: "center", color: "white" }}>
+            Sertifikasi
+          </h1>
+          <SkeletonGrid count={3} type="certificate" />
+        </div>
+      ) : (
+        <Certification certificates={certificates} />
+      )}
 
       <Contact />
 

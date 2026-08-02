@@ -5,6 +5,7 @@ import { API_URL } from "../config";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CertificateDetail from "../components/CertificateDetail";
+import SkeletonGrid from "../components/Skeleton";
 
 function Certificates() {
 
@@ -12,6 +13,7 @@ function Certificates() {
 setSelectedCertificate] = useState(null);
 
   const [certificates, setCertificates] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchCertificates = async () => {
     try {
@@ -22,6 +24,8 @@ setSelectedCertificate] = useState(null);
       setCertificates(res.data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -123,7 +127,7 @@ setSelectedCertificate] = useState(null);
                 margin: 0,
               }}
             >
-              {certificates.length}
+              {loading ? "..." : certificates.length}
             </h2>
 
             <p
@@ -152,15 +156,19 @@ setSelectedCertificate] = useState(null);
             gap: "30px",
           }}
         >
-          {certificates.map((certificate) => (
-            <CertificateDetail
-             certificate={certificate}
-            onPreview={() => setSelectedCertificate(certificate)}
-              key={certificate._id}
-            />
-            
-            
-          ))}
+          {loading ? (
+            <SkeletonGrid count={3} type="certificate" />
+          ) : (
+            certificates.map((certificate) => (
+              <CertificateDetail
+               certificate={certificate}
+              onPreview={() => setSelectedCertificate(certificate)}
+                key={certificate._id}
+              />
+              
+              
+            ))
+          )}
           
         </div>
       </section>

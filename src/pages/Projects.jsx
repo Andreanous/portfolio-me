@@ -1,16 +1,18 @@
   import Navbar from "../components/Navbar";
   import Footer from "../components/Footer";
   import StatCircle from "../components/StatCircle";
-  import { motion } from "framer-motion";
-  import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../config";
+import SkeletonGrid from "../components/Skeleton";
 
 
 
   function Projects() {
 
       const [projects, setProjects] = useState([]);
+      const [loading, setLoading] = useState(true);
 
 useEffect(() => {
   const fetchProjects = async () => {
@@ -22,6 +24,8 @@ useEffect(() => {
       setProjects(res.data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -225,6 +229,9 @@ useEffect(() => {
     digital solutions built with modern technologies.
   </p>
 </div>
+          {loading ? (
+            <SkeletonGrid count={3} type="project" />
+          ) : (
           <div
             style={{
               display: "grid",
@@ -402,6 +409,7 @@ useEffect(() => {
               </div>
             ))}
           </div>
+          )}
 
           <style>
             {`

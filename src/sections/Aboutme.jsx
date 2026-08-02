@@ -162,7 +162,7 @@ function Aboutme() {
                 desc: "Saya ingin berkembang sebagai full-stack developer yang andal dan berkontribusi dalam tim engineering.",
               },
             ].map((item) => (
-              <div
+              <div  
                 key={item.title}
                 style={{
                   display: "flex",
