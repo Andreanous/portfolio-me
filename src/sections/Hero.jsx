@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
-    
-{/* HERO SECTION */}
-return (
-        <div
-          style={{
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <div
+      style={{
             minHeight: "90vh",
             display: "flex",
             justifyContent: "center",
@@ -74,7 +78,8 @@ return (
               justifyContent: "center", // Memastikan tombol di tengah
             }}
           >
-            <button
+            <Link
+              to="/projects"
               style={{
                 padding: "16px 32px",
                 borderRadius: "14px",
@@ -86,12 +91,18 @@ return (
                 cursor: "pointer",
                 fontWeight: "bold",
                 minWidth: "160px", // Memastikan tombol punya ukuran minimum
+                textDecoration: "none",
+                display: "inline-flex",
+                justifyContent: "center",
+                alignItems: "center",
+                boxSizing: "border-box",
               }}
             >
               Explore Projects
-            </button>
+            </Link>
 
             <button
+              onClick={scrollToContact}
               style={{
                 padding: "16px 32px",
                 borderRadius: "14px",

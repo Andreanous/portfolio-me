@@ -38,6 +38,7 @@ function Contact() {
 
   return (
     <div
+      id="contact"
       style={{
         padding: "140px 40px",
         position: "relative",
